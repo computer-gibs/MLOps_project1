@@ -11,7 +11,7 @@ preprocessor = ColumnTransformer(transformers=[
     ('cat', OneHotEncoder(handle_unknown='ignore'), ['CountryCode', 'Status', 'ReactorType', 'ReactorModel'])
 ])
 
-model = RandomForestRegressor(n_estimators=100, random_state=0)
+model = RandomForestRegressor(n_estimators=500, random_state=0)
 
 pipeline = Pipeline(steps=[
     ('preprocessor', preprocessor),

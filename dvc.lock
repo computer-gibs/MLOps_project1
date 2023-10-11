@@ -66,7 +66,7 @@ stages:
     outs:
     - path: models/model.pkl
       md5: ae2623572154ef5350162b0f96eeb134
-      size: 2726297
+      size: 12826297
   evaluate_model:
     cmd: python3 metrics/evaluate.py
     deps:
@@ -78,7 +78,7 @@ stages:
       size: 648
     - path: models/model.pkl
       md5: ae2623572154ef5350162b0f96eeb134
-      size: 2726297
+      size: 12826297
     metrics:
     - path: metrics/metrics.json
       md5: eb1eb3bc38e93447749c5314d902f100

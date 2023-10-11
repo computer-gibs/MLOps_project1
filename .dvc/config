@@ -1,0 +1,4 @@
+[core]
+    remote = data_srv
+['remote "data_srv"']
+    url = ssh://clone@192.168.56.102:/MLOps_project1

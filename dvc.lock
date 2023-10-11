@@ -1,0 +1,56 @@
+schema: '2.0'
+stages:
+   split_data:
+     cmd: python3 scripts/data_scripts/get_data.py
+     deps:
+     - path: data/raw/nuclear_power_plants.csv
+       md5: cb931e306d89271e9780d6e389ab8326
+       size: 108323
+     - path: scripts/data_scripts/get_data.py
+       md5: 372cb48299de3a19ba4ed7442a2ec7df
+       size: 638
+     outs:
+     - path: data/raw/train.csv
+       md5: dbe00769f2bb9a3173173827a37cc627
+       size: 84922
+     - path: data/raw/test.csv
+       md5: df54dcf78835e2a0714de410c77f3155
+       size: 22134
+   feature_selection:
+     cmd: python3 scripts/data-processing/get_features.py
+     deps:
+     - path: data/raw/train.csv
+       md5: dbe00769f2bb9a3173173827a37cc627
+       size: 84922
+     - path: data/raw/test.csv
+       md5: df54dcf78835e2a0714de410c77f3155
+       size: 22134
+     - path: scripts/data-processing/get_features.py
+       md5: dd761c6f9f18edc43f50fb3388f3b7b2
+       size: 625
+     outs:
+     - path: data/processed/train_processed.csv
+       md5: b01f43b628290dff2f82c342639b5abe
+       size: 42855
+     - path: data/processed/test_processed.csv
+       md5: a280f30b3de5339d279c57888d480688
+       size: 11385
+   fill_na:
+     cmd: python3 scripts/data-processing/fill_na.py
+     deps:
+     - path: data/processed/train_processed.csv
+       md5: b01f43b628290dff2f82c342639b5abe
+       size: 42855
+     - path: data/processed/test_processed.csv
+       md5: a280f30b3de5339d279c57888d480688
+       size: 11385
+     - path: scripts/data-processing/fill_na.py
+       md5: 850f32bcd855f85cbdf1c9221d6cc80d
+       size: 523
+     outs:
+     - path: data/processed/train_final.csv
+       md5: 1810f22c1b6c42072ec3a47cbcab669d
+       size: 43612
+     - path: data/processed/test_final.csv
+       md5: 59955b8ef5f1bdeec4970f7d41d7ac35
+       size: 11419

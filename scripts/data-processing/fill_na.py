@@ -1,4 +1,5 @@
 import pandas as pd
+
 train_processed_data_path = '../../data/processed/train_processed.csv'
 test_processed_data_path = '../../data/processed/test_processed.csv'
 

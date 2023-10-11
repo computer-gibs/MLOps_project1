@@ -9,3 +9,8 @@
 
 # Исходный датасет
 * [Geo Nuclear Data](https://www.kaggle.com/datasets/mexwell/geo-nuclear-data)
+
+# Исходные метрики
+* "MAE": 109.35226241331411
+* "MSE": 36779.68070661419
+* "R2": 0.7855579800730262

@@ -6,3 +6,6 @@
 
 # Автор
 * [Александр Калиберда](https://github.com/computer-gibs)
+
+# Исходный датасет
+* [Geo Nuclear Data](https://www.kaggle.com/datasets/mexwell/geo-nuclear-data)

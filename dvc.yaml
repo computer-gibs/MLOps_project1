@@ -33,7 +33,7 @@ stages:
     outs:
     - models/model.pkl
   evaluate_model:
-    cmd: python3 metircs/evaluate.py
+    cmd: python3 metrics/evaluate.py
     deps:
     - data/processed/test_final.csv
     - metrics/evaluate.py

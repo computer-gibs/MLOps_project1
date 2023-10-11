@@ -25,3 +25,11 @@ stages:
     outs:
     - data/processed/train_final.csv
     - data/processed/test_final.csv
+  train_model:
+    cmd: python3 scripts/model_learning/train_model.py
+    deps:
+    - data/processed/train_final.csv
+    - scripts/model_learning/train_model.py
+    outs:
+    - models/model.pkl
+  

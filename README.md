@@ -5,7 +5,7 @@
 Обучение модели предсказания изменения мощностей атомных электростанций по всему миру.
 
 # Автор
-* [Александр Калиберда](https://github.com/computer-gibs)
+* [Александр Калиберда, группа РИМ-220908](https://github.com/computer-gibs)
 
 # Исходный датасет
 * [Geo Nuclear Data](https://www.kaggle.com/datasets/mexwell/geo-nuclear-data)

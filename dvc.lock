@@ -68,7 +68,7 @@ stages:
       md5: ae2623572154ef5350162b0f96eeb134
       size: 2726297
   evaluate_model:
-    cmd: python3 scripts/model_learning/evaluate.py
+    cmd: python3 metrics/evaluate.py
     deps:
     - path: data/processed/test_final.csv 
       md5: 59955b8ef5f1bdeec4970f7d41d7ac35

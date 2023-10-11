@@ -1,7 +1,7 @@
 [core]
     remote = ssh-storage
 ['remote "ssh-storage"']
-    url = ssh://data_srv@192.168.56.102/MLOps_project1/data
+    url = ssh://clone@192.168.56.102/MLOps_project1/data
     password = clone
     user = clone
     port = 22

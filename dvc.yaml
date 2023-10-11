@@ -2,26 +2,26 @@ stages:
   split_data:
     cmd: python3 scripts/data_scripts/get_data.py
     deps:
-      - data/raw/nuclear_power_plants.csv
-      - scripts/data_scripts/get_data.py
+    - data/raw/nuclear_power_plants.csv
+    - scripts/data_scripts/get_data.py
     outs:
-      - data/raw/train.csv
-      - data/raw/test.csv
+    - data/raw/train.csv
+    - data/raw/test.csv
   feature_selection:
     cmd: python3 scripts/data-processing/get_features.py
     deps:
-      - data/raw/train.csv
-      - data/raw/test.csv
-      - scripts/data-processing/get_features.py
+    - data/raw/train.csv
+    - data/raw/test.csv
+    - scripts/data-processing/get_features.py
     outs:
-      - data/processed/train_processed.csv
-      - data/processed/test_processed.csv
+    - data/processed/train_processed.csv
+    - data/processed/test_processed.csv
   fill_na:
     cmd: python3 scripts/data-processing/fill_na.py
     deps:
-      - data/processed/train_processed.csv
-      - data/processed/test_processed.csv
-      - scripts/data-processing/fill_na.py
+    - data/processed/train_processed.csv
+    - data/processed/test_processed.csv
+    - scripts/data-processing/fill_na.py
     outs:
-      - data/processed/train_final.csv
-      - data/processed/test_final.csv
+    - data/processed/train_final.csv
+    - data/processed/test_final.csv

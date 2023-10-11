@@ -8,7 +8,7 @@ import pickle
 train = pd.read_csv('../../data/processed/train_final.csv')
 
 preprocessor = ColumnTransformer(transformers=[
-    ('cat', OneHotEncoder(), ['CountryCode', 'Status', 'ReactorType', 'ReactorModel'])
+    ('cat', OneHotEncoder(handle_unknown='ignore'), ['CountryCode', 'Status', 'ReactorType', 'ReactorModel'])
 ])
 
 model = RandomForestRegressor(n_estimators=100, random_state=0)
